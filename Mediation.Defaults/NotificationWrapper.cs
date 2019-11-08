@@ -12,12 +12,12 @@ namespace Mediation.Defaults {
                 (next, step) => () => step.Execute(value, next))();
         }
 
-        public override async Task SendAsync(
+        public override Task SendAsync(
             MediationServiceProvider serviceProvider, 
             object message, 
             CancellationToken cancellationToken) {
             var value = (TMessage)message;
-            await serviceProvider.GenerateNotificationPipeline<TMessage>(
+            return serviceProvider.GenerateNotificationPipeline<TMessage>(
                 (handler) => () => handler.HandleAsync(value, cancellationToken),
                 (next, step) => () => step.ExecuteAsync(value, next, cancellationToken))();
         }

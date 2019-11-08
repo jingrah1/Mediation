@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Mediation.Extensions;
 using System.Collections.Concurrent;
 using Mediation.Defaults;
 
 namespace Mediation {
     public class DefaultMediator : IMediator {
         MediationServiceProvider Services { get; }
-        PipelineFactory PipelineFactory { get; }
 
         ConcurrentDictionary<Type, RequestWrapper> RequestWrappers =
             new ConcurrentDictionary<Type, RequestWrapper>();
@@ -16,25 +14,9 @@ namespace Mediation {
             new ConcurrentDictionary<Type, NotificationWrapper>();
 
         public DefaultMediator(
-            MediationServiceProvider services,
-            PipelineFactory pipelineFactory) {
+            MediationServiceProvider services) {
             Services = services ?? throw new ArgumentNullException(nameof(services));
-            PipelineFactory = pipelineFactory ?? throw new ArgumentNullException(nameof(pipelineFactory));
         }
-
-        //public Task<TResult> RequestAsync<TRequest, TResult>(TRequest request, CancellationToken cancellationToken) {
-        //    var handler = Services.GetService<IRequestHandler<TRequest, TResult>>();
-        //    if (handler == null) throw new InvalidOperationException("Could not find target handler");
-        //    PipelineFactory.GenerateRequestPipeline(handler);
-        //    return handler.HandleAsync(request, cancellationToken);
-        //}
-
-        //public async Task SendAsync<TMessage>(TMessage request, CancellationToken cancellationToken) {
-        //    foreach (var handler in Services.GetServices<INotificationHandler<TMessage>>()) {
-        //        PipelineFactory.GenerateNotificationPipeline(handler);
-        //        await handler.HandleAsync(request, cancellationToken);
-        //    }
-        //}
 
         RequestWrapper GetOrAddRequestWrapper<TResult>(object request) {
             return RequestWrappers.GetOrAdd(request.GetType(), type => {
@@ -51,7 +33,8 @@ namespace Mediation {
         public async Task<TResult> RequestAsync<TResult>(object request, CancellationToken cancellationToken) {
             var wrapper = GetOrAddRequestWrapper<TResult>(request);
             cancellationToken.ThrowIfCancellationRequested();
-            return (TResult) await wrapper.RequestAsync(Services, request, cancellationToken);
+            return (TResult) await wrapper.RequestAsync(Services, request, cancellationToken)
+                .ConfigureAwait(false);
         }
 
         NotificationWrapper GetOrAddNotificationWrapper(object message) {
@@ -69,7 +52,8 @@ namespace Mediation {
         public async Task SendAsync(object message, CancellationToken cancellationToken) {
             var wrapper = GetOrAddNotificationWrapper(message);
             cancellationToken.ThrowIfCancellationRequested();
-            await wrapper.SendAsync(Services, message, cancellationToken);
+            await wrapper.SendAsync(Services, message, cancellationToken)
+                .ConfigureAwait(false);
         }
     }
 }
