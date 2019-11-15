@@ -3,10 +3,18 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.0.1</Version>
-    <GenerateAssemblyAuthorsAttribute>false</GenerateAssemblyAuthorsAttribute>
+    <Version>0.0.2</Version>
+    <PackageId>Mediation</PackageId>
+    <AssemblyName>Mediation</AssemblyName>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/jingrah1/Mediation</RepositoryUrl>
+    <SignAssembly>true</SignAssembly>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <AssemblyOriginatorKeyFile>Mediation.snk</AssemblyOriginatorKeyFile>
+    <PackageProjectUrl>https://github.com/jingrah1/Mediation</PackageProjectUrl>
+    <Authors>N/A</Authors>
   </PropertyGroup>
 
 </Project>

@@ -2,8 +2,21 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>0.0.1</Version>
     <LangVersion>8</LangVersion>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyName>Mediation.Microsoft.Extensions.DependencyInjection</AssemblyName>
+    <PackageId>Mediation.Microsoft.Extensions.DependencyInjection</PackageId>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/jingrah1/Mediation</RepositoryUrl>
+    <SignAssembly>true</SignAssembly>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/jingrah1/Mediation</PackageProjectUrl>
+    <Authors>N/A</Authors>
+    <AssemblyOriginatorKeyFile>Mediation.Microsoft.Extensions.DependencyInjection.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
