@@ -11,12 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mediation.Defaults", "Media
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mediation.Microsoft.Extensions.DependencyInjection", "Mediation.Microsoft.Extensions.DependencyInjection\Mediation.Microsoft.Extensions.DependencyInjection.csproj", "{A7883DA4-B18E-4D7A-BC79-7F8282FE6D68}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mediation.Microsoft.Extensions.DependencyInjection.Tests", "Mediation.Microsoft.Extensions.DependencyInjection.Tests\Mediation.Microsoft.Extensions.DependencyInjection.Tests.csproj", "{8787A45A-FF2C-4098-9F56-F1114038A851}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A7F070C0-D8DC-46A6-837E-0110C76D5AA5}"
-	ProjectSection(SolutionItems) = preProject
-		License.txt = License.txt
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediation.Microsoft.Extensions.DependencyInjection.Tests", "Mediation.Microsoft.Extensions.DependencyInjection.Tests\Mediation.Microsoft.Extensions.DependencyInjection.Tests.csproj", "{8787A45A-FF2C-4098-9F56-F1114038A851}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
