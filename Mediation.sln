@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mediation.Tests", "Mediatio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mediation.Defaults", "Mediation.Defaults\Mediation.Defaults.csproj", "{19E8F8AD-54EB-4623-B0E6-8DF12A85EBD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediation.Microsoft.Extensions.DependencyInjection", "Mediation.Microsoft.Extensions.DependencyInjection\Mediation.Microsoft.Extensions.DependencyInjection.csproj", "{A7883DA4-B18E-4D7A-BC79-7F8282FE6D68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mediation.Microsoft.Extensions.DependencyInjection", "Mediation.Microsoft.Extensions.DependencyInjection\Mediation.Microsoft.Extensions.DependencyInjection.csproj", "{A7883DA4-B18E-4D7A-BC79-7F8282FE6D68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediation.Microsoft.Extensions.DependencyInjection.Tests", "Mediation.Microsoft.Extensions.DependencyInjection.Tests\Mediation.Microsoft.Extensions.DependencyInjection.Tests.csproj", "{8787A45A-FF2C-4098-9F56-F1114038A851}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A7883DA4-B18E-4D7A-BC79-7F8282FE6D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7883DA4-B18E-4D7A-BC79-7F8282FE6D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7883DA4-B18E-4D7A-BC79-7F8282FE6D68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8787A45A-FF2C-4098-9F56-F1114038A851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8787A45A-FF2C-4098-9F56-F1114038A851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8787A45A-FF2C-4098-9F56-F1114038A851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8787A45A-FF2C-4098-9F56-F1114038A851}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
